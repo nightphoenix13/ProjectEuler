@@ -1,0 +1,37 @@
+public static void main(String[] args)
+	{
+		// constants
+		final long MAX = 4000000;
+		
+		// variable
+		long num1 = 0,
+			 num2 = 1,
+			 total = 0,
+			 temp;
+		
+		System.out.println(num1);
+		System.out.println(num2);
+
+		for (int x = 0; num2 < MAX; x++)
+		{
+			temp = num1;
+			num1 = temp + num2;
+			System.out.println(num1);
+			num2 = num1 + num2;
+			System.out.println(num2);
+			
+			if (num1 < MAX && num1 % 2 == 0)
+			{
+				total += num1;
+				System.out.println("Total: " + total);
+			}
+			
+			if (num2 < MAX && num2 % 2 == 0)
+			{
+				total += num2;
+				System.out.println("Total: " + total);
+			}
+		}
+		
+		System.out.println(total);
+	}
